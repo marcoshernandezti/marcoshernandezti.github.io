@@ -1,55 +1,93 @@
+/* ====== BASE ====== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #e6f0ff, #ffffff);
-}
-
-.section {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  padding: 2rem;
-  margin-top: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.section-title {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #0d6efd;
-  display: inline-block;
-  padding-bottom: 0.4rem;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
 }
 
-nav {
-  font-weight: 500;
+/* ====== HEADER ====== */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-footer {
-  margin-top: 3rem;
+.navbar-brand {
+  font-size: 1.1rem;
+}
+
+/* ====== HERO ====== */
+.hero {
+  background: linear-gradient(to bottom, #e6f0ff, #ffffff);
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.hero-intro {
+  max-width: 700px;
+  margin-top: 1.5rem;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* ====== SECCIONES ====== */
+.section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #0d6efd;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+/* ====== SERVICIOS ====== */
+.service-card {
+  padding: 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e5e5;
+  height: 100%;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ====== FOOTER ====== */
+.site-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 2rem 0;
+  text-align: center;
   font-size: 0.9rem;
   color: #6c757d;
-  text-align: center;
 }
 
-.typewriter h1 {
-  overflow: hidden;
-  border-right: 0.15em solid #0d6efd;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.05em;
-  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #0d6efd }
+.site-footer a {
+  color: #6c757d;
 }
