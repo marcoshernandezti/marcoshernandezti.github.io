@@ -2,38 +2,127 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Proyectos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Proyectos | Marcos Hernández</title>
+
+  <meta name="description" content="Proyectos de Marcos Hernández, Senior Backend Engineer. Desarrollo backend, modernización de sistemas y optimización de bases de datos.">
+  <meta name="author" content="Marcos Hernández">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-<nav class="container mt-3">
-  <a href="/">Inicio</a> |
-  <a href="/proyectos/">Proyectos</a> |
-  <a href="/blog/">Blog</a> |
-  <a href="/experiencia/">Experiencia</a> |
-  <a href="/servicios/optimizacion-cv/">Servicios</a> |
-  <a href="/contacto/">Contacto</a>
-</nav>
+<!-- ====== HEADER ====== -->
+<header class="site-header">
+  <nav class="container navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">Marcos Hernández</a>
 
-<div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="section">
-    <h1 class="section-title">📁 Proyectos</h1>
+    <div id="menu" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/experiencia/">Experiencia</a></li>
+        <li class="nav-item"><span class="nav-link active">Proyectos</span></li>
+        <li class="nav-item"><a class="nav-link" href="/servicios/">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contacto/">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <ul>
-      <li>
-        <strong>Sistema de Gestión de Comunas</strong><br>
-        <a href="https://github.com/marcoshernandezti/ProyectoComunas">Ver repositorio</a>
-      </li>
-    </ul>
+<!-- ====== PROYECTOS ====== -->
+<section class="section">
+  <div class="container">
+
+    <h1 class="section-title">Proyectos</h1>
+
+    <p class="mb-4">
+      A continuación se presentan algunos proyectos representativos enfocados en desarrollo backend,
+      análisis técnico y modernización de sistemas. Estos proyectos reflejan mi forma de abordar
+      problemas reales desde una perspectiva técnica y estructurada.
+    </p>
+
+    <!-- PROYECTO 1 -->
+    <div class="service-card mb-4">
+      <h3>Modernización backend en .NET 8</h3>
+      <p>
+        Proyecto orientado a la construcción de una solución backend moderna utilizando .NET 8,
+        aplicando arquitectura en capas y buenas prácticas de desarrollo.
+      </p>
+      <p>
+        <strong>Aspectos destacados:</strong>
+      </p>
+      <ul>
+        <li>Separación clara de responsabilidades</li>
+        <li>Uso de Entity Framework Core</li>
+        <li>Persistencia mediante procedimientos almacenados</li>
+        <li>Enfoque en mantenibilidad y escalabilidad</li>
+      </ul>
+      <a href="https://github.com/marcoshernandezti/ProyectoComunas" target="_blank">
+        Ver repositorio en GitHub
+      </a>
+    </div>
+
+    <!-- PROYECTO 2 -->
+    <div class="service-card mb-4">
+      <h3>Buscador con paginación y análisis de datos</h3>
+      <p>
+        Implementación de un buscador con paginación a partir de información estructurada en XML,
+        diseñado como ejercicio de análisis, transformación de datos y manejo eficiente de resultados.
+      </p>
+      <p>
+        <strong>Aspectos destacados:</strong>
+      </p>
+      <ul>
+        <li>Procesamiento y consumo de datos estructurados</li>
+        <li>Lógica de paginación orientada a rendimiento</li>
+        <li>Base para evolución hacia arquitectura en capas</li>
+      </ul>
+      <a href="https://github.com/marcoshernandezti/ProyectoPaginacion" target="_blank">
+        Ver repositorio en GitHub
+      </a>
+    </div>
+
+    <!-- PROYECTO 3 -->
+    <div class="service-card mb-4">
+      <h3>Optimización y análisis de bases de datos</h3>
+      <p>
+        Diferentes iniciativas orientadas al análisis y optimización de consultas SQL,
+        procedimientos almacenados e índices, con foco en mejorar tiempos de respuesta y
+        estabilidad de sistemas existentes.
+      </p>
+      <p>
+        <strong>Aspectos destacados:</strong>
+      </p>
+      <ul>
+        <li>Análisis de rendimiento en sistemas productivos</li>
+        <li>Refactorización de procedimientos almacenados</li>
+        <li>Mejoras progresivas sin afectar continuidad operativa</li>
+      </ul>
+    </div>
 
   </div>
+</section>
 
-</div>
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      © 2026 Marcos Hernández ·
+      <a href="https://www.linkedin.com/in/marcoshernandezalvarez/" target="_blank">LinkedIn</a>
+    </p>
+  </div>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
