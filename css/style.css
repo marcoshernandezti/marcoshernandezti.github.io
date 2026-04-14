@@ -91,3 +91,33 @@ a {
 .site-footer a {
   color: #6c757d;
 }
+
+/* Hover suave para bloques de contenido */
+.service-card {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  background-color: #f1f3f5; /* gris/plomo muy suave */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.service-card p {
+  margin-bottom: 0.75rem;
+}
+
+.service-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Imagenes dentro de posts */
+.post-image {
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .post-image {
+    max-width: 100%;
+  }
+}
