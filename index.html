@@ -1,34 +1,11 @@
 <!DOCTYPE html>
-<html lang="es-CL">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="es-CL  <meta name="viewport" content="width=device-width, initial-scale=1"><html lang="es-CL">
 
-  <title>Marcos Hernández Álvarez</title>
+  <title>Marcos Hernández | Backend y Optimización de Datos</title>
 
-  <meta name="description" content="Espacio personal y profesional de Marcos Hernández. Backend, sistemas, tecnología y reflexiones personales.">
-  <meta name="author" content="Marcos Hernández Álvarez">
-  <meta property="og:title" content="Marcos Hernández Álvarez">
-  <meta property="og:description" content="Backend, sistemas, tecnología y reflexiones personales.">
-  <meta property="og:url" content="https://marcoshernandez.dev/">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Ingeniero backend con +20 años de experiencia en optimización de sistemas, SQL Server y procesos de datos en entornos críticos.">
 
-  <link rel="canonical" href="https://marcoshernandez.dev/">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-65BM2PWW0V"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    
-    gtag('config', 'G-65BM2PWW0V', {
-      page_location: window.location.href,
-      page_path: window.location.pathname
-    });
-
-  </script>
+  <link rel="icon" href="/favicon.ico">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,111 +14,664 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<!-- ===== HEADER ===== -->
+	<header class="site-header">
+	  <nav class="container navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand fw-bold" href="/">Marcos Hernández</a>
 
-<!-- ====== HEADER ====== -->
-<header class="site-header">
-  <nav class="container navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand fw-bold" href="/">Marcos Hernández</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+		<div id="menu" class="collapse navbar-collapse">
+		  <ul class="navbar-nav ms-auto">
+			<li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+			<li class="nav-item"><a class="nav-link" href="#casos">Casos</a></li>
+			<li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+			<li class="nav-item"><a class="nav-link" href="/portafolio/">Portafolio</a></li>
+			<li class="nav-item"><a class="nav-link" href="#quien-soy">Sobre mí</a></li>
+			<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+		  </ul>
+		</div>
+	  </nav>
+	</header>
 
-    <div id="menu" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="/sobre-mi/">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/proyectos/">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/servicios/">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contacto/">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+	<!-- ===== HERO ===== -->
+	<section class="hero">
+		<img
+			src="img/hero-data.webp" class="hero-bg">
+		
+		<canvas id="heroCanvas"></canvas>
 
-<!-- ====== HERO ====== -->
-<section class="hero">
-  <div class="container">
-    <h1>Hola, soy Marcos</h1>
+		<div class="section-next">
+			#quien-soy>		
+		</div>
+	</section>
+	
+	<!-- ===== quien soy ===== -->
+	<section id="quien-soy" class="section section-space">
+		<div class="container">
 
-    <p class="hero-intro mt-3">
-      Soy Ingeniero en Informática y trabajo hace varios años en desarrollo backend y sistemas
-      empresariales. Me interesa entender cómo funcionan las cosas, mejorarlas de forma gradual
-      y encontrar soluciones simples a problemas complejos.
-    </p>
+			<h2>Quién Soy</h2>
 
-    <p class="hero-intro mb-0">
-      Este sitio es un espacio personal donde comparto ideas técnicas, aprendizajes,
-      reflexiones profesionales y proyectos que estoy explorando, tanto a nivel técnico
-      como personal.
-    </p>
-  </div>
-</section>
+			<div class="card-pro">
 
-<!-- ====== CONTENIDO PRINCIPAL ====== -->
-<section class="section">
-  <div class="container">
+				<p>
+					Soy Marcos, profesional del área tecnológica con más de
+					veinte años de experiencia participando en proyectos relacionados
+					con sistemas backend, integración de aplicaciones y plataformas
+					de datos en entornos empresariales.
+				</p>
+				<p>
+					A lo largo de mi carrera he trabajado principalmente con
+					SQL Server, .NET, ETL e integración de sistemas, participando
+					en iniciativas donde la estabilidad, la trazabilidad y el
+					rendimiento son fundamentales.
+				</p>
+				<!--<p>
+					Me gusta analizar problemas complejos, comprender cómo se relacionan
+					los distintos componentes de una solución y encontrar formas
+					simples de resolver desafíos técnicos que a veces parecen difíciles.
+				</p>-->
+				<p>
+					Este sitio es un espacio personal donde comparto experiencias,
+					aprendizajes, desafíos resueltos y algunos de los temas que me
+					interesan dentro y fuera de la tecnología.
+				</p>
 
-    <!-- BLOQUE: QUÉ ENCONTRARÁS -->
-    <div class="service-card">
-      <h2 class="h5 mb-2">Qué encontrarás aquí</h2>
-      <ul class="mb-0">
-        <li>
-          <strong>Blog:</strong> artículos técnicos sobre backend, bases de datos y modernización
-          de sistemas, junto a reflexiones más personales.
-        </li>
-        <li>
-          <strong>Proyectos:</strong> iniciativas y experimentos que he construido para aprender,
-          validar ideas o resolver problemas reales.
-        </li>
-        <li>
-          <strong>Servicios:</strong> ideas y soluciones que estoy desarrollando con foco en
-          automatización, eficiencia y uso práctico de tecnología.
-        </li>
-      </ul>
-    </div>
+			</div>
 
-  </div>
-</section>
+		</div>
+		
+		<div class="section-next">
+			<button class="btn-next">↓</button>
+		</div>
+	</section>
+	
+	<!-- ===== casos exito ===== -->
+	<section id="casos" class="section section-space">
+		<div class="container">
 
-<!-- ====== EN QUÉ ESTOY TRABAJANDO ====== -->
-<section class="section bg-light">
-  <div class="container">
+			<h2>Casos de Éxito Destacados</h2>
 
-    <div class="service-card">
-      <h2 class="h5 mb-2">En qué estoy trabajando</h2>
+			<div class="card-pro">
 
-      <p>
-        Actualmente estoy explorando ideas relacionadas con automatización, análisis y uso de
-        inteligencia artificial aplicada a problemas cotidianos, además de profundizar en
-        arquitecturas cloud y soluciones backend modernas.
-      </p>
+				<h3>Optimización de procedimientos SQL Server</h3>
+				<p>
+					Revisión y optimización de procesos críticos ejecutados en ambientes
+					productivos de alta demanda, reduciendo tiempos de ejecución y
+					mejorando la estabilidad operacional.
+				</p>
+				
+				<hr>
+				
+				<h3>Automatización de procesos de integración</h3>
+				<p>
+					Diseño de procesos automáticos para validación, transferencia
+					y procesamiento de archivos reduciendo tareas manuales y riesgos
+					operativos.
+				</p>
+				
+				<hr>
+				
+				<h3>Calidad y trazabilidad de datos</h3>
 
-      <p class="mb-3">
-        Algunas de estas ideas se encuentran en etapas tempranas, como parte de un proceso
-        de aprendizaje y experimentación personal.
-      </p>
+				<p>
+					Implementación de validaciones y controles destinados a mejorar
+					la calidad de los datos antes de su utilización por aplicaciones
+					y procesos de negocio.
+				</p>
+			</div>
 
-      <a href="/servicios/" class="btn btn-outline-primary btn-sm">
-        Ver iniciativas y servicios
-      </a>
-    </div>
+		</div>
+		
+		<div class="section-next">
+			<button class="btn-next">↓</button>
+		</div>
+	</section>
 
-  </div>
-</section>
+	<!-- ===== ULTIMOS POST ===== -->
+	<section id="blog-home" class="section section-space">
 
-<!-- ====== FOOTER ====== -->
-<footer class="site-footer">
-  <div class="container">
-    <p>
-      © 2026 Marcos Hernández ·
-      <a href="https://www.linkedin.com/in/marcoshernandezalvarez/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-      <a href="https://github.com/marcoshernandezti" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </p>
-  </div>
-</footer>
+		<div class="container">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+			<h2>Últimos Artículos</h2>
+
+			<div class="card-pro">
+
+				<h3>Optimización de consultas SQL Server</h3>
+				<p>
+					Experiencias reales identificando cuellos de botella y mejorando
+					el rendimiento de procesos críticos.
+				</p>
+				<a href="">
+					Leer artículo →
+				</a>
+				
+				<hr>
+
+				<h3>Manejo de calidad de datos en procesos ETL</h3>
+				<p>
+					Técnicas utilizadas para detectar registros inconsistentes antes
+					de afectar procesos posteriores.
+				</p>
+				<a href="">
+					Leer artículo →
+				</a>
+
+				<hr>
+
+				<h3>Automatización de tareas repetitivas</h3>
+				<p>
+					Cómo pequeñas automatizaciones pueden generar mejoras importantes
+					en productividad y confiabilidad.
+				</p>
+
+				<a href="">
+					Leer artículo →
+				</a>
+
+			</div>
+
+		</div>
+		
+		<div class="section-next">
+			<button class="btn-next">↓</button>
+		</div>
+	</section>
+	
+	<!-- ===== TECNOLOGIAS ===== -->
+	<section id="tecnologias" class="section section-space">
+		<div class="container">
+
+			<h2>Tecnologías Favoritas</h2>
+
+			<div class="card-pro">
+
+				<p>
+					Tecnologías con las que disfruto trabajar y en las que he acumulado
+					mayor experiencia durante mi carrera profesional.
+				</p>
+
+				<div class="tech-list">
+
+					<span class="badge bg-primary">SQL Server</span>
+					<span class="badge bg-primary">ETL</span>
+					<span class="badge bg-primary">.NET</span>
+					<span class="badge bg-primary">C#</span>
+					<span class="badge bg-primary">JavaScript</span>
+					<span class="badge bg-primary">JSON</span>
+					<span class="badge bg-primary">Git</span>
+					<span class="badge bg-primary">APIs</span>
+
+				</div>
+
+			</div>
+
+		</div>
+		
+		<div class="section-next">
+			<button class="btn-next">↓</button>
+		</div>	
+	</section>
+	
+	<!-- ===== HOBBIES ===== -->
+	<section id="hobbies" class="section section-space">
+		<div class="container">
+
+			<h2>Hobbies e Intereses</h2>
+
+			<div class="card-pro">
+
+				<ul>
+
+					<li>Ajedrez y pensamiento estratégico.</li>
+
+					<li>Aprendizaje continuo y nuevas tecnologías.</li>
+
+					<li>Arquitectura de software y optimización de sistemas.</li>
+
+					<li>Finanzas personales e inversión.</li>
+
+					<li>Trekking y actividades al aire libre.</li>
+
+					<li>Buceo y experiencias relacionadas con la exploración.</li>
+
+				</ul>
+
+			</div>
+		</div>
+	
+		<div class="section-next">
+			<button class="btn-next">↓</button>
+		</div>
+	</section>
+	
+	
+	<!-- ===== CONTACTO ===== -->
+	<section id="contacto" class="section section-space">
+		<div class="container text-center">
+
+			<h2>Contacto</h2>
+
+			<p>
+				Si deseas conversar sobre tecnología, arquitectura,
+				optimización de sistemas o simplemente intercambiar ideas,
+				puedes encontrarme en:
+			</p>
+
+			<p>
+				<a href="https://www.linkedin.com/in/marcoshernandezalvarez/" class="btn btn-primary">				
+					LinkedIn
+				</a>
+				|
+				<a href="https://github.com/marcoshernandezti" class="btn btn-primary">
+					GitHub
+				</a>
+			</p>
+
+		</div>
+	</section>
+	
+	<!-- ===== FOOTER ===== -->
+	<footer class="site-footer">
+	  <div class="container">
+		<p>
+		  © 2026 Marcos Hernández ·
+		  <a href="https://www.linkedin.com/in/marcoshernandezalvarez/" target="_blank">LinkedIn</a> ·
+		  <a href="https://github.com/marcoshernandezti" target="_blank">GitHub</a>
+		</p>
+	  </div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<button id="btnTop" aria-label="Volver arriba">
+		↑
+	</button>
+
+	<script>
+		const btnTop = document.getElementById("btnTop");
+
+		// Mostrar cuando bajas
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				btnTop.classList.add("show");
+			} else {
+				btnTop.classList.remove("show");
+			}
+		});
+
+		// Volver arriba suave
+		btnTop.addEventListener("click", () => {
+			window.scrollTo({
+			  top: 0,
+			  behavior: "smooth"
+			});
+		});
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const canvas = document.getElementById("heroCanvas");
+
+			if (!canvas) return;
+
+			const ctx = canvas.getContext("2d");
+
+			function resizeCanvas() {
+
+				canvas.width = canvas.offsetWidth;
+				canvas.height = canvas.offsetHeight;
+
+			}
+
+			resizeCanvas();
+
+			window.addEventListener(
+				"resize",
+				resizeCanvas
+			);
+
+			const cycleDuration = 12000;
+
+			function bezier(t, p0, p1, p2) {
+
+				return {
+					x:
+						(1 - t) * (1 - t) * p0.x +
+						2 * (1 - t) * t * p1.x +
+						t * t * p2.x,
+
+					y:
+						(1 - t) * (1 - t) * p0.y +
+						2 * (1 - t) * t * p1.y +
+						t * t * p2.y
+				};
+
+			}
+
+			function drawParticle(x, y, radius, alpha) {
+
+				const gradient =
+					ctx.createRadialGradient(
+						x,
+						y,
+						0,
+						x,
+						y,
+						radius * 8
+					);
+
+				gradient.addColorStop(
+					0,
+					`rgba(255,255,255,${alpha})`
+				);
+
+				gradient.addColorStop(
+					0.25,
+					`rgba(150,230,255,${alpha * 0.8})`
+				);
+
+				gradient.addColorStop(
+					1,
+					"rgba(0,180,255,0)"
+				);
+
+				ctx.fillStyle = gradient;
+
+				ctx.beginPath();
+
+				ctx.arc(
+					x,
+					y,
+					radius * 8,
+					0,
+					Math.PI * 2
+				);
+
+				ctx.fill();
+
+				ctx.fillStyle =
+					`rgba(255,255,255,${alpha})`;
+
+				ctx.beginPath();
+
+				ctx.arc(
+					x,
+					y,
+					radius,
+					0,
+					Math.PI * 2
+				);
+
+				ctx.fill();
+
+			}
+
+			let animationStart = performance.now();
+
+			function animate(timestamp) {
+
+				ctx.clearRect(
+					0,
+					0,
+					canvas.width,
+					canvas.height
+				);
+
+				const elapsed =
+					((timestamp - animationStart)
+					% cycleDuration)
+					/ cycleDuration;
+
+				const left = {
+					x: canvas.width * 0.17,
+					y: canvas.height * 0.56
+				};
+
+				const center = {
+					x: canvas.width * 0.515,
+					y: canvas.height * 0.50
+				};
+
+				const right = {
+					x: canvas.width * 0.86,
+					y: canvas.height * 0.49
+				};
+
+				/*
+					ETAPA 1
+				*/
+
+				if (elapsed <= 0.35) {
+
+					const t =
+						elapsed / 0.35;
+
+					const pos =
+						bezier(
+
+							t,
+
+							left,
+
+							{
+								x:
+								canvas.width * 0.36,
+
+								y:
+								canvas.height * 0.37
+							},
+
+							center
+						);
+
+					const radius =
+						1.5 + (7 * t);
+
+					drawParticle(
+						pos.x,
+						pos.y,
+						radius,
+						1
+					);
+
+				}
+
+				/*
+					PULSO CENTRAL
+				*/
+
+				if (
+					elapsed >= 0.35 &&
+					elapsed <= 0.45
+				) {
+
+					const pulse =
+						(
+							elapsed - 0.35
+						) / 0.10;
+
+					const radius =
+						60 + pulse * 120;
+
+					ctx.strokeStyle =
+						`rgba(
+							120,
+							220,
+							255,
+							${0.5 - pulse * 0.5}
+						)`;
+
+					ctx.lineWidth = 3;
+
+					ctx.beginPath();
+
+					ctx.arc(
+						center.x,
+						center.y,
+						radius,
+						0,
+						Math.PI * 2
+					);
+
+					ctx.stroke();
+
+				}
+
+				/*
+					ETAPA 2
+				*/
+
+				if (
+					elapsed >= 0.45 &&
+					elapsed <= 0.80
+				) {
+
+					const t =
+						(elapsed - 0.45)
+						/ 0.35;
+
+					const pos =
+						bezier(
+
+							t,
+
+							center,
+
+							{
+								x:
+								canvas.width * 0.69,
+
+								y:
+								canvas.height * 0.62
+							},
+
+							right
+						);
+
+					const radius =
+						8 + (10 * t);
+
+					drawParticle(
+						pos.x,
+						pos.y,
+						radius,
+						1
+					);
+
+				}
+
+				/*
+					PARTICULAS SECUNDARIAS
+				*/
+
+				for (let i = 0; i < 25; i++) {
+
+					const offset =
+						(elapsed + i * 0.03)
+						% 1;
+
+					let p;
+
+					if (offset < 0.5) {
+
+						p = bezier(
+
+							offset * 2,
+
+							left,
+
+							{
+								x:
+								canvas.width * 0.36,
+
+								y:
+								canvas.height * 0.37
+							},
+
+							center
+						);
+
+					}
+					else {
+
+						p = bezier(
+
+							(offset - 0.5) * 2,
+
+							center,
+
+							{
+								x:
+								canvas.width * 0.69,
+
+								y:
+								canvas.height * 0.62
+							},
+
+							right
+						);
+
+					}
+
+					drawParticle(
+						p.x,
+						p.y,
+						1,
+						0.08
+					);
+
+				}
+
+				requestAnimationFrame(
+					animate
+				);
+
+			}
+
+			requestAnimationFrame(
+				animate
+			);
+
+		});
+	
+		document
+		.querySelectorAll('.btn-next')
+		.forEach(btn => {
+
+			btn.addEventListener('click', () => {
+
+				const secciónActual =
+					btn.closest('section');
+
+				if(!secciónActual)
+					return;
+
+				let siguiente =
+					secciónActual.nextElementSibling;
+
+				while(
+					siguiente &&
+					siguiente.tagName !== 'SECTION'
+				){
+					siguiente =
+						siguiente.nextElementSibling;
+				}
+
+				if(siguiente){
+
+					siguiente.scrollIntoView({
+						behavior:'smooth',
+						block:'start'
+					});
+
+				}
+
+			});
+
+		});
+	</script>
 </body>
 </html>
+<head>
+  <meta charset="UTF-8">
