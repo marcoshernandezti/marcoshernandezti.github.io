@@ -1,123 +1,301 @@
-/* ====== BASE ====== */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
-  line-height: 1.6;
+/* =========================================================
+   BASE
+========================================================= */
+html{
+	scroll-behavior:smooth;
 }
+
+body {
+    position: relative;
+    z-index: 0;
+    color: #cbd5f5;
+    background: #020617;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    background: rgba(2, 6, 23, 0.90);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link {
+    opacity: .80;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+	min-height:520px;
+	/* margin-bottom:5px; */
+}
+/*
+.hero-bg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+*/
+.hero-bg{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+
+#heroCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.section {
+    padding: 45px 20px;
+}
+
+.section h2 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.section p {
+    color: #cbd5f5;
+}
+
+.section-space{
+    position:relative;
+    overflow:hidden;
+}
+
+.section-space::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            rgba(2,6,23,.85),
+            rgba(2,6,23,.85)
+        ),
+        url('../img/space-bg.webp')
+        center center / cover no-repeat;
+
+    z-index:-1;
+}
+
+
+.section-next{
+    text-align:center;
+    margin-top:25px;
+    position:relative;
+    top:15px;
+}
+
+.btn-next{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:48px;
+    height:48px;
+
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+
+    background:rgba(15,23,42,.85);
+
+    color:#93c5fd;
+
+    font-size:24px;
+    font-weight:bold;
+    line-height:1;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.35);
+
+    transition:all .25s ease;
+}
+
+.btn-next:hover{
+
+    background:#2563eb;
+    color:#fff;
+
+    transform:translateY(3px);
+}
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.card-pro {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255,255,255,0.05);
+
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+	opacity: 0.8;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.4);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.card-pro:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.6);
+}
+
+.card-pro h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card-pro p,
+.card-pro li {
+    color: #cbd5f5;
+}
+
+.card-pro ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.card-pro li {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   TECNOLOGÍAS
+========================================================= */
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-list .badge {
+    font-size: .90rem;
+    padding: 8px 12px;
+}
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.btn-primary {
+    background: #2563eb;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
 
 a {
-  text-decoration: none;
+    color: #93c5fd;
+    text-decoration: none;
 }
 
-/* ====== HEADER ====== */
-.site-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+a:hover {
+    text-decoration: underline;
 }
 
-.navbar-brand {
-  font-size: 1.1rem;
-}
+/* =========================================================
+   FOOTER
+========================================================= */
 
-/* ====== HERO ====== */
-.hero {
-  background: linear-gradient(to bottom, #e6f0ff, #ffffff);
-  padding: 4rem 0;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #0d6efd;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 0.5rem;
-}
-
-.hero-intro {
-  max-width: 700px;
-  margin-top: 1.5rem;
-}
-
-.hero-actions {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-}
-
-/* ====== SECCIONES ====== */
-.section {
-  padding: 4rem 0;
-  background-color: #ffffff;
-}
-
-.section-title {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  border-bottom: 3px solid #0d6efd;
-  display: inline-block;
-  padding-bottom: 0.4rem;
-}
-
-/* ====== SERVICIOS ====== */
-.service-card {
-  padding: 1.8rem;
-  border-radius: 1rem;
-  border: 1px solid #e5e5e5;
-  height: 100%;
-}
-
-.service-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-/* ====== FOOTER ====== */
 .site-footer {
-  background-color: #ffffff;
-  border-top: 1px solid #e5e5e5;
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #6c757d;
+    padding: 40px 0;
+    text-align: center;
+    color: #94a3b8;
 }
 
-.site-footer a {
-  color: #6c757d;
+/* =========================================================
+   BOTÓN VOLVER ARRIBA
+========================================================= */
+
+#btnTop {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(37,99,235,.90);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.3);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
 }
 
-/* Hover suave para bloques de contenido */
-.service-card {
-  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+#btnTop:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
 }
 
-.service-card:hover {
-  background-color: #f1f3f5; /* gris/plomo muy suave */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.service-card p {
-  margin-bottom: 0.75rem;
-}
-
-.service-card p:last-child {
-  margin-bottom: 0;
-}
-
-/* Imagenes dentro de posts */
-.post-image {
-  max-width: 65%;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .post-image {
-    max-width: 100%;
-  }
+#btnTop.show {
+    opacity: 1;
+    visibility: visible;
 }
