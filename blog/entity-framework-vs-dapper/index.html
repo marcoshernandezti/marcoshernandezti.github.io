@@ -1,237 +1,144 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Entity Framework vs Dapper: cuándo usar cada uno | Marcos Hernández</title>
-
-  <meta name="description" content="Comparación real entre Entity Framework y Dapper, con foco en mantenibilidad, escalabilidad y criterio arquitectural en proyectos .NET.">
-  <meta name="author" content="Marcos Hernández">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KFRD0RRSB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2KFRD0RRSB');
-  </script>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="../../css/style.css">
-</head>
-
-<body>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header">
-  <nav class="container navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand fw-semibold" href="/">Marcos Hernández</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="menu" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="/sobre-mi/">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/proyectos/">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/servicios/">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contacto/">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-
-<!-- ===== CONTENIDO ===== -->
-<section class="section">
-  <div class="container">
-    <article>
-
-      <h1 class="section-title">
+<!DOCTYPE html><html lang="es-CL"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Entity Framework vs Dapper | Marcos Hernández</title><meta name="description" content="Comparación práctica entre Entity Framework y Dapper."><link rel="stylesheet" href="../../css/site.css"></head><body><site-header data-active="blog"></site-header><main class="page-main"><div class="container article-wrap"><div class="article-card"><article>
+<h1 class="section-title">
         Entity Framework vs Dapper: cuándo usar cada uno
       </h1>
-
-      <p class="text-muted mb-4">
+<p class="text-muted mb-4">
         Backend · .NET · arquitectura · acceso a datos
       </p>
-
-      <!-- INTRO -->
-      <div class="service-card">
-        <p>
+<!-- INTRO -->
+<div class="article-highlight">
+<p>
           Entity Framework y Dapper suelen presentarse como herramientas opuestas, y muchas veces
           la discusión se centra únicamente en rendimiento. En proyectos reales, especialmente
           empresariales, la decisión va mucho más allá de la velocidad.
         </p>
-        <p class="mb-0">
+<p class="mb-0">
           El criterio, la mantenibilidad y la claridad para el equipo terminan siendo factores
           mucho más relevantes que unos pocos milisegundos.
         </p>
-      </div>
-
-      <p>
+</div>
+<p>
         En mi experiencia, Dapper encaja muy bien en proyectos pequeños o MVPs, mientras que
         Entity Framework resulta más adecuado en sistemas grandes, con múltiples desarrolladores,
         testing formal y una vida útil larga.
       </p>
-
-      <!-- CRITERIO EF -->
-      <div class="service-card">
-        <h2 class="h5">Un punto clave al usar Entity Framework</h2>
-        <p class="mb-0">
+<!-- CRITERIO EF -->
+<div class="article-highlight">
+<h2 class="h5">Un punto clave al usar Entity Framework</h2>
+<p class="mb-0">
           No es una buena práctica abusar de consultas LINQ con múltiples joins para consultas
           complejas o de alto volumen. En estos casos, es preferible dejar la lógica pesada en
           procedimientos almacenados bien optimizados a nivel de base de datos.
         </p>
-      </div>
-
-      <p>
+</div>
+<p>
         Una combinación sana en proyectos empresariales suele ser:
         <strong>Entity Framework para CRUD y dominio</strong> y
         <strong>procedimientos almacenados para consultas grandes o complejas</strong>.
         Estos procedimientos pueden invocarse desde Entity Framework mapeando entidades
         o usando métodos del contexto, de forma muy similar a consultar tablas.
       </p>
-
-      <!-- IMAGEN COMPARATIVA -->
-      <figure class="my-5 text-center post-image">
-        <img src="../../assets/img/ef-vs-dapper-comparativa.png"
-             class="img-fluid rounded"
-             alt="Comparación Entity Framework vs Dapper">
-        <figcaption class="text-muted small mt-2">
+<!-- IMAGEN COMPARATIVA -->
+<figure class="my-5 text-center post-image">
+<img alt="Comparación Entity Framework vs Dapper" class="img-fluid rounded" src="../../assets/img/ef-vs-dapper-comparativa.png"/>
+<figcaption class="text-muted small mt-2">
           Visión general de cuándo usar Entity Framework o Dapper en proyectos reales.
         </figcaption>
-      </figure>
-
-      <!-- TABLA COMPARATIVA -->
-      <div class="service-card">
-        <h2 class="h5">Comparación práctica</h2>
-
-        <div class="table-responsive">
-          <table class="table table-sm align-middle">
-            <thead>
-              <tr>
-                <th>Aspecto</th>
-                <th>Entity Framework</th>
-                <th>Dapper</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Abstracción</td>
-                <td>Alta (ORM completo)</td>
-                <td>Baja (SQL manual)</td>
-              </tr>
-              <tr>
-                <td>CRUD estándar</td>
-                <td>Eficiente y mantenible</td>
-                <td>Eficiente</td>
-              </tr>
-              <tr>
-                <td>Tiempo CRUD (100–1.000 registros)</td>
-                <td>~5–20 ms</td>
-                <td>~3–15 ms</td>
-              </tr>
-              <tr>
-                <td>Consultas grandes (1M+ registros)</td>
-                <td>No recomendado con LINQ complejo</td>
-                <td>Adecuado si el SQL está optimizado</td>
-              </tr>
-              <tr>
-                <td>Testing</td>
-                <td>Muy bueno</td>
-                <td>Más complejo</td>
-              </tr>
-              <tr>
-                <td>Mantenibilidad</td>
-                <td>Alta</td>
-                <td>Disminuye a largo plazo</td>
-              </tr>
-              <tr>
-                <td>Cambios de esquema</td>
-                <td>Más seguros (tipado)</td>
-                <td>Propensos a errores</td>
-              </tr>
-              <tr>
-                <td>Uso recomendado</td>
-                <td>Proyectos grandes</td>
-                <td>MVP / casos puntuales</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="mb-0 text-muted small">
+</figure>
+<!-- TABLA COMPARATIVA -->
+<div class="article-highlight">
+<h2 class="h5">Comparación práctica</h2>
+<div class="table-responsive">
+<table class="table table-sm align-middle">
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Entity Framework</th>
+<th>Dapper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abstracción</td>
+<td>Alta (ORM completo)</td>
+<td>Baja (SQL manual)</td>
+</tr>
+<tr>
+<td>CRUD estándar</td>
+<td>Eficiente y mantenible</td>
+<td>Eficiente</td>
+</tr>
+<tr>
+<td>Tiempo CRUD (100–1.000 registros)</td>
+<td>~5–20 ms</td>
+<td>~3–15 ms</td>
+</tr>
+<tr>
+<td>Consultas grandes (1M+ registros)</td>
+<td>No recomendado con LINQ complejo</td>
+<td>Adecuado si el SQL está optimizado</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>Muy bueno</td>
+<td>Más complejo</td>
+</tr>
+<tr>
+<td>Mantenibilidad</td>
+<td>Alta</td>
+<td>Disminuye a largo plazo</td>
+</tr>
+<tr>
+<td>Cambios de esquema</td>
+<td>Más seguros (tipado)</td>
+<td>Propensos a errores</td>
+</tr>
+<tr>
+<td>Uso recomendado</td>
+<td>Proyectos grandes</td>
+<td>MVP / casos puntuales</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mb-0 text-muted small">
           Nota: en CRUD tradicionales la diferencia es mínima; el rendimiento real depende
           más del diseño de consultas e índices que del ORM.
         </p>
-      </div>
-
-      <!-- EJEMPLO EF -->
-      <h2>Ejemplo con Entity Framework</h2>
-
-      <figure class="my-4 text-center post-image">
-        <img src="../../assets/img/codigo-entity-framework.png"
-             class="img-fluid rounded"
-             alt="Ejemplo de código Entity Framework">
-        <figcaption class="text-muted small mt-2">
+</div>
+<!-- EJEMPLO EF -->
+<h2>Ejemplo con Entity Framework</h2>
+<figure class="my-4 text-center post-image">
+<img alt="Ejemplo de código Entity Framework" class="img-fluid rounded" src="../../assets/img/codigo-entity-framework.png"/>
+<figcaption class="text-muted small mt-2">
           Consulta simple utilizando Entity Framework.
         </figcaption>
-      </figure>
-
-      <!-- EJEMPLO DAPPER -->
-      <h2>Ejemplo con Dapper</h2>
-
-      <figure class="my-4 text-center post-image">
-        <img src="../../assets/img/codigo-dapper.png"
-             class="img-fluid rounded"
-             alt="Ejemplo de código con Dapper">
-        <figcaption class="text-muted small mt-2">
+</figure>
+<!-- EJEMPLO DAPPER -->
+<h2>Ejemplo con Dapper</h2>
+<figure class="my-4 text-center post-image">
+<img alt="Ejemplo de código con Dapper" class="img-fluid rounded" src="../../assets/img/codigo-dapper.png"/>
+<figcaption class="text-muted small mt-2">
           Consulta explícita utilizando Dapper.
         </figcaption>
-      </figure>
-
-      <!-- BLOQUE DAPPER -->
-      <div class="service-card">
-        <h2 class="h5">Una desventaja clave de Dapper</h2>
-        <p class="mb-0">
+</figure>
+<!-- BLOQUE DAPPER -->
+<div class="article-highlight">
+<h2 class="h5">Una desventaja clave de Dapper</h2>
+<p class="mb-0">
           Al requerir SQL explícito, cualquier cambio en la estructura de la base de datos
           implica revisar consultas manualmente. En proyectos grandes esto suele convertirse
           en una fuente constante de errores y mantenimiento adicional.
         </p>
-      </div>
-
-      <!-- CONCLUSIÓN -->
-      <div class="service-card bg-light">
-        <h2 class="h5">Conclusión</h2>
-        <p class="mb-0">
+</div>
+<!-- CONCLUSIÓN -->
+<div class="article-highlight">
+<h2 class="h5">Conclusión</h2>
+<p class="mb-0">
           Dapper es una gran herramienta para soluciones rápidas y MVPs. Entity Framework
           brilla en proyectos empresariales de largo plazo. Mezclarlos sin reglas claras
           suele generar confusión. El criterio y la claridad siempre pesan más que un
           benchmark aislado.
         </p>
-      </div>
-
-    </article>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>
-      © 2026 Marcos Hernández ·
-      <a href="https://www.linkedin.com/in/marcoshernandezalvarez/" target="_blank">LinkedIn</a>
-    </p>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</div>
+</article></div><p style="margin-top:22px"><a class="card-link" href="../index.html">← Volver al blog</a></p></div></main><site-footer></site-footer><script src="../../js/site.js" defer></script></body></html>
