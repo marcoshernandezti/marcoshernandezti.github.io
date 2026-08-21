@@ -1,187 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Migración de .NET Framework a .NET Core: enfoque y buenas prácticas | Marcos Hernández</title>
-
-  <meta name="description" content="Análisis técnico y enfoque recomendado para migrar aplicaciones .NET Framework a .NET moderno de forma segura y progresiva.">
-  <meta name="author" content="Marcos Hernández">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KFRD0RRSB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2KFRD0RRSB');
-  </script>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="../../css/style.css">
-</head>
-
-<body>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header">
-  <nav class="container navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand fw-semibold" href="/">Marcos Hernández</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="menu" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="/sobre-mi/">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/proyectos/">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/servicios/">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contacto/">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-
-<!-- ===== CONTENIDO ===== -->
-<section class="section">
-  <div class="container">
-
-    <article>
-
-      <h1 class="section-title">
+<!DOCTYPE html><html lang="es-CL"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Migración de .NET Framework a .NET moderno | Marcos Hernández</title><meta name="description" content="Enfoque práctico para modernizar aplicaciones .NET."><link rel="stylesheet" href="../../css/site.css"></head><body><site-header data-active="blog"></site-header><main class="page-main"><div class="container article-wrap"><div class="article-card"><article>
+<h1 class="section-title">
         Migración de .NET Framework a .NET Core: enfoque y buenas prácticas
       </h1>
-
-      <p class="text-muted mb-4">
+<p class="text-muted mb-4">
         Backend · modernización · .NET
       </p>
-
-      <!-- BLOQUE INTRO -->
-      <div class="service-card">
-        <p>
+<!-- BLOQUE INTRO -->
+<div class="article-highlight">
+<p>
           La migración de aplicaciones desde <strong>.NET Framework</strong> hacia
           <strong>.NET Core / .NET moderno</strong> es un proceso que va mucho más allá
           de una simple actualización de versión.
         </p>
-        <p class="mb-0">
+<p class="mb-0">
           En proyectos reales, este cambio implica decisiones técnicas, análisis de
           dependencias y una gestión cuidadosa de riesgos.
         </p>
-      </div>
-
-      <!-- IMAGEN CONTEXTUAL -->
-      <figure class="my-4 text-center post-image">
-        <img src="../../assets/img/migracion-dotnet-concepto.png"
-             alt="Concepto de modernización de aplicaciones .NET"
-             class="img-fluid rounded">
-        <figcaption class="text-muted small mt-2">
+</div>
+<!-- IMAGEN CONTEXTUAL -->
+<figure class="my-4 text-center post-image">
+<img alt="Concepto de modernización de aplicaciones .NET" class="img-fluid rounded" src="../../assets/img/migracion-dotnet-concepto.png"/>
+<figcaption class="text-muted small mt-2">
           Modernización progresiva de aplicaciones backend.
         </figcaption>
-      </figure>
-
-      <!-- TEXTO -->
-      <h2>¿Por qué migrar a .NET Core?</h2>
-      <p>
+</figure>
+<!-- TEXTO -->
+<h2>¿Por qué migrar a .NET Core?</h2>
+<p>
         Algunos de los principales motivos que impulsan esta migración en contextos
         empresariales son:
       </p>
-      <ul>
-        <li>Fin de soporte extendido de .NET Framework</li>
-        <li>Mejor rendimiento y eficiencia</li>
-        <li>Mayor compatibilidad con arquitecturas modernas y cloud</li>
-        <li>Base tecnológica sostenible a largo plazo</li>
-      </ul>
-
-      <h2>Errores frecuentes en procesos de migración</h2>
-      <p>
+<ul>
+<li>Fin de soporte extendido de .NET Framework</li>
+<li>Mejor rendimiento y eficiencia</li>
+<li>Mayor compatibilidad con arquitecturas modernas y cloud</li>
+<li>Base tecnológica sostenible a largo plazo</li>
+</ul>
+<h2>Errores frecuentes en procesos de migración</h2>
+<p>
         En mi experiencia, muchos problemas en migraciones surgen por decisiones
         apresuradas o enfoques poco realistas:
       </p>
-      <ul>
-        <li>Migrar todo el sistema de una sola vez</li>
-        <li>No analizar dependencias obsoletas</li>
-        <li>Asumir que el código existente es fácilmente portable</li>
-        <li>No considerar impactos en bases de datos y procesos críticos</li>
-      </ul>
-
-      <!-- BLOQUE CLAVE -->
-      <div class="service-card">
-        <h2 class="h5">Flujo recomendado de migración</h2>
-        <p class="mb-0">
+<ul>
+<li>Migrar todo el sistema de una sola vez</li>
+<li>No analizar dependencias obsoletas</li>
+<li>Asumir que el código existente es fácilmente portable</li>
+<li>No considerar impactos en bases de datos y procesos críticos</li>
+</ul>
+<!-- BLOQUE CLAVE -->
+<div class="article-highlight">
+<h2 class="h5">Flujo recomendado de migración</h2>
+<p class="mb-0">
           Un enfoque progresivo y controlado reduce riesgos y permite validar decisiones
           técnicas en etapas tempranas.
         </p>
-      </div>
-
-      <!-- DIAGRAMA -->
-      <figure class="my-4">
-        <svg width="100%" height="180" viewBox="0 0 800 180">
-          <rect x="20" y="60" width="180" height="50" fill="#e6f0ff" stroke="#0d6efd"/>
-          <text x="110" y="90" text-anchor="middle">Análisis actual</text>
-
-          <rect x="220" y="60" width="180" height="50" fill="#e6f0ff" stroke="#0d6efd"/>
-          <text x="310" y="90" text-anchor="middle">Identificación riesgos</text>
-
-          <rect x="420" y="60" width="180" height="50" fill="#e6f0ff" stroke="#0d6efd"/>
-          <text x="510" y="90" text-anchor="middle">Migración parcial</text>
-
-          <rect x="620" y="60" width="160" height="50" fill="#e6f0ff" stroke="#0d6efd"/>
-          <text x="700" y="90" text-anchor="middle">Evolución</text>
-        </svg>
-        <figcaption class="text-muted small mt-2">
+</div>
+<!-- DIAGRAMA -->
+<figure class="my-4">
+<svg height="180" viewbox="0 0 800 180" width="100%">
+<rect fill="#e6f0ff" height="50" stroke="#0d6efd" width="180" x="20" y="60"></rect>
+<text text-anchor="middle" x="110" y="90">Análisis actual</text>
+<rect fill="#e6f0ff" height="50" stroke="#0d6efd" width="180" x="220" y="60"></rect>
+<text text-anchor="middle" x="310" y="90">Identificación riesgos</text>
+<rect fill="#e6f0ff" height="50" stroke="#0d6efd" width="180" x="420" y="60"></rect>
+<text text-anchor="middle" x="510" y="90">Migración parcial</text>
+<rect fill="#e6f0ff" height="50" stroke="#0d6efd" width="160" x="620" y="60"></rect>
+<text text-anchor="middle" x="700" y="90">Evolución</text>
+</svg>
+<figcaption class="text-muted small mt-2">
           Flujo conceptual recomendado para migraciones backend.
         </figcaption>
-      </figure>
-
-      <ol>
-        <li>Análisis del sistema actual y sus dependencias</li>
-        <li>Identificación de componentes críticos</li>
-        <li>Migraciones parciales o por módulos</li>
-        <li>Validación y ajustes progresivos</li>
-      </ol>
-
-      <h2>Buenas prácticas técnicas</h2>
-      <ul>
-        <li>Separar responsabilidades antes de migrar</li>
-        <li>Reducir acoplamientos innecesarios</li>
-        <li>Revisar acceso a datos y procedimientos almacenados</li>
-        <li>Aprovechar la migración para mejorar mantenibilidad</li>
-      </ul>
-
-      <!-- BLOQUE CIERRE -->
-      <div class="service-card bg-light">
-        <h2 class="h5">Conclusión</h2>
-        <p class="mb-0">
+</figure>
+<ol>
+<li>Análisis del sistema actual y sus dependencias</li>
+<li>Identificación de componentes críticos</li>
+<li>Migraciones parciales o por módulos</li>
+<li>Validación y ajustes progresivos</li>
+</ol>
+<h2>Buenas prácticas técnicas</h2>
+<ul>
+<li>Separar responsabilidades antes de migrar</li>
+<li>Reducir acoplamientos innecesarios</li>
+<li>Revisar acceso a datos y procedimientos almacenados</li>
+<li>Aprovechar la migración para mejorar mantenibilidad</li>
+</ul>
+<!-- BLOQUE CIERRE -->
+<div class="article-highlight">
+<h2 class="h5">Conclusión</h2>
+<p class="mb-0">
           Una migración exitosa hacia .NET moderno no se mide solo por el cambio de
           framework, sino por la mejora real en calidad, mantenibilidad y proyección
           futura del sistema.
         </p>
-      </div>
-
-      <p class="mt-4">
+</div>
+<p class="mt-4">
         Si estás evaluando la modernización de un sistema backend,
-        puedes revisar los <a href="/servicios/">servicios disponibles</a>
-        o <a href="/contacto/">contactarme</a>.
+        puedes revisar los <a href="../../servicios/index.html">servicios disponibles</a>
+        o <a href="../../contacto/index.html">contactarme</a>.
       </p>
-
-    </article>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2026 Marcos Hernández</p>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</article></div><p style="margin-top:22px"><a class="card-link" href="../index.html">← Volver al blog</a></p></div></main><site-footer></site-footer><script src="../../js/site.js" defer></script></body></html>
