@@ -1,0 +1,29 @@
+{
+  "intervaloMs": 6000,
+  "historias": [
+    {
+      "tipo": "perfil",
+      "etiqueta": "Perfil",
+      "titulo": "Hola, soy Marcos",
+      "descripcion": "Ingeniero de Ejecución en Informática con más de 19 años de experiencia desarrollando e integrando soluciones de software."
+    },
+    {
+      "tipo": "codigo",
+      "etiqueta": "Desarrollo",
+      "titulo": "Backend como base, Full-Stack como evolución",
+      "descripcion": "Mi experiencia principal está en .NET, C# y SQL Server. Hoy amplío ese conocimiento con JavaScript, TypeScript y tecnologías frontend modernas."
+    },
+    {
+      "tipo": "proyecto",
+      "etiqueta": "Proyectos",
+      "titulo": "Aprender construyendo",
+      "descripcion": "Mis proyectos propios me permiten practicar APIs REST, arquitectura, datos, automatización y buenas prácticas, dejando el código disponible en GitHub."
+    },
+    {
+      "tipo": "cloud",
+      "etiqueta": "Ecosistema actual",
+      "titulo": "Full-Stack, Cloud y DevOps",
+      "descripcion": "Complemento mi base .NET con Angular y Node.js, además de Azure y Docker para cloud y entrega de software. React es la tecnología que sigo fortaleciendo."
+    }
+  ]
+}
